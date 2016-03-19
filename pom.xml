@@ -1,10 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>springstart</groupId>
-  <artifactId>springstart</artifactId>
-  <version>1.0.0</version>
-  <packaging>war</packaging>
-  	<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>springstart</groupId>
+	<artifactId>springstart</artifactId>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+	<properties>
 		<spring.version>4.2.5.RELEASE</spring.version>
 		<hibernate.version>5.1.0.Final</hibernate.version>
 		<jackson.version>2.7.2</jackson.version>
@@ -12,11 +13,23 @@
 		<dbunit.version>2.2</dbunit.version>
 		<testng.version>6.9.10</testng.version>
 		<h2.version>1.4.191</h2.version>
-		<mockito.version>1.10.19</mockito.version>
-		<struts.version>2.3.24.1</struts.version>
+		<shiro.version>1.2.4</shiro.version>
+		<freemarker.version>2.3.23</freemarker.version>
 	</properties>
-  <dependencies>
-  		<!-- test -->
+	<!-- <dependency> <groupId>org.apache.shiro</groupId> <artifactId>shiro-core</artifactId> 
+		<version>${shiro.version}</version> </dependency> -->
+
+	<dependencies>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+		<!-- test -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -27,19 +40,19 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-				<dependency>
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>1.2.8</version>
 		</dependency>
-				<!-- MySQL -->
+		<!-- MySQL -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.38</version>
 			<scope>provided</scope>
 		</dependency>
-				<!-- Needed for JSON View -->
+		<!-- Needed for JSON View -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -110,14 +123,14 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-				<!-- Hibernate -->
+		<!-- Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
-  </dependencies>
-  	<dependencyManagement>
+	</dependencies>
+	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework</groupId>
