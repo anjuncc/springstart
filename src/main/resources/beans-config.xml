@@ -9,10 +9,10 @@
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd  
         http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-	<bean id="entityManagerFactory"
+<!-- 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="a.j.myshop.domain" />
+		<property name="packagesToScan" value="a.j.springstart.domain" />
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
 		</property>
@@ -29,15 +29,15 @@
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
 
-	<tx:annotation-driven transaction-manager="transactionManager" />
+	<tx:annotation-driven transaction-manager="transactionManager" /> -->
 
-	<bean id="dataSource"
+<!-- 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://127.0.0.1:3306/myshop" />
 		<property name="username" value="dev" />
 		<property name="password" value="dev" />
-	</bean>
+	</bean> -->
 
 
 	<!-- <beans profile="default"> <jee:jndi-lookup id="dataSource" jndi-name="jdbc/f2fshop"></jee:jndi-lookup> 
@@ -45,5 +45,5 @@
 	<!-- <beans profile="test"> <jdbc:embedded-database id="dataSource"> <jdbc:script 
 		location="classpath:com/cptrue/f2fshop/create_table.sql" /> </jdbc:embedded-database> 
 		</beans> -->
-		<bean id="data" class="java.util.Date"/>
+	
 </beans>

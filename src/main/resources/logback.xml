@@ -28,7 +28,7 @@
 
 	<!-- <logger name="com.itruelife.f2fshop.config" level="DEBUG"> <appender-ref 
 		ref="STDOUT" /> </logger> -->
-	<root level="DEBUG">
+	<root level="INFO">
 		<appender-ref ref="STDOUT" />
 	</root>
 </configuration>  
