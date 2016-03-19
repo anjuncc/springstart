@@ -14,5 +14,10 @@ public interface UserDao {
     User findById(int id);
      
     User findBySSO(String sso);
+
+	/**
+	 * @param user
+	 */
+	void save(User user);
      
 }
