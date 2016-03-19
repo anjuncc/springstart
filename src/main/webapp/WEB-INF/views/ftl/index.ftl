@@ -50,7 +50,7 @@ legend { font-weight: bold; }
   	</tr>
     <#list model["carList"] as car>
 	  	<tr>
-	  		<td>${car}</td> <td>${car}</td>
+	  			<td>${car.make}</td> <td>${car.model}</td>
 	  	</tr>
     </#list>
   </table>
