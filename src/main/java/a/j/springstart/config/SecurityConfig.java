@@ -31,16 +31,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		logger.info("configureGlobal");
 	}
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http
-		.authorizeRequests()
-			.anyRequest().authenticated()
-			.and()
-		.formLogin().and()
-		.httpBasic();
-		http.authorizeRequests().antMatchers("/", "/index/index").permitAll().antMatchers("/admin/**")
-				.access("hasRole('ADMIN')").antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')").and()
-				.formLogin().and().exceptionHandling().accessDeniedPage("/Access_Denied");
-	}
+//	@Override
+//	protected void configure(HttpSecurity http) throws Exception {
+//		http
+//		.authorizeRequests()
+//			.anyRequest().authenticated()
+//			.and()
+//		.formLogin().and()
+//		.httpBasic();
+//		http.authorizeRequests().antMatchers("/", "/index/index").permitAll().antMatchers("/admin/**")
+//				.access("hasRole('ADMIN')").antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')").and()
+//				.formLogin().and().exceptionHandling().accessDeniedPage("/Access_Denied");
+//	}
 }
