@@ -30,7 +30,7 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
         crit.add(Restrictions.eq("ssoId", sso));
         User u= (User) crit.uniqueResult();
   
-        String hql = "FROM a.j.springstart.domain.User";
+        String hql = "FROM User";
         Query query = getSession().createQuery(hql);
         List results = query.list();
       
