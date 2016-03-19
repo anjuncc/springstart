@@ -4,17 +4,18 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Admin page</title>
+    <title>User Registration Form</title>
     <link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"></link>
     <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
 </head>
 <body>
     <div class="success">
-        Dear <strong>${user}</strong>, Welcome to Admin Page.
+        Confirmation message : ${success}
+        <br>
+        Would you like to <a href="<c:url value='/newUser' />">Add More Users</a>?
         <br/>
-        Would you like to <a href="<c:url value='/newUser' />">Add Some Users</a> to keep yourself busy?
-        <br/>
-        <a href="<c:url value="/logout" />">Logout</a>
+        Go to <a href="<c:url value='/admin' />">Admin Page</a> OR <a href="<c:url value="/logout" />">Logout</a>   
     </div>
+     
 </body>
 </html>

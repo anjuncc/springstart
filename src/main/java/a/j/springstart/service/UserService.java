@@ -14,5 +14,10 @@ public interface UserService {
     User findById(int id);
      
     User findBySso(String sso);
+
+	/**
+	 * @param user
+	 */
+	void save(User user);
      
 }
